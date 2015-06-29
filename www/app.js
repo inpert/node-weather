@@ -13,7 +13,7 @@ app.config(function ($routeProvider, $locationProvider) {
     });
 });
 
-app.factory('Weather', function ($resource, baseUrl) {
+app.factory('weather', function ($resource, baseUrl) {
 
     var Weather = $resource(baseUrl);
 
@@ -28,7 +28,7 @@ app.factory('Weather', function ($resource, baseUrl) {
     };
 });
 
-app.controller('mainCtrl', function ($scope, $http, $resource, $location, Weather) {
+app.controller('mainCtrl', function ($scope, $http, $resource, $location, weather) {
 
     $scope.city = { name: 'toronto' };
     $scope.current = {};
