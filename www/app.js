@@ -15,11 +15,11 @@ app.config(function ($routeProvider, $locationProvider) {
 
 app.factory('weather', function ($resource, baseUrl) {
 
-    var Weather = $resource(baseUrl);
+    var weather = $resource(baseUrl);
 
     return {
         getWeather: function (weatherParams) {
-            return Weather.get(weatherParams, function (successResult) {
+            return weather.get(weatherParams, function (successResult) {
                 return successResult;
             }, function (errorResult) {
                 console.log(errorResult);
@@ -40,7 +40,7 @@ app.controller('mainCtrl', function ($scope, $http, $resource, $location, weathe
             q: $scope.city.name
         };
 
-        $scope.weather = Weather.getWeather(city);
+        $scope.weather = weather.getWeather(city);
         $location.path('/result');
         $scope.loading = false;
     };
