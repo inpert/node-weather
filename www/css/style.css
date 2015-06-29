@@ -1,0 +1,14 @@
+﻿.weather-panel {
+    margin-top: 15px;
+    background-color: rgb(142, 255, 0);
+    color: rgb(200, 0, 255);
+}
+
+.temp {
+    font-size: 50px;
+}
+
+input, button {
+    margin-bottom: 10px;
+}
+    

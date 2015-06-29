@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html ng-app="weatherApp">
+<head>
+    <title></title>
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="lib/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body id="weatherApp" ng-controller="mainCtrl">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel-primary">
+                    <h1 class="panel-heading">Weather Forcast</h1>
+                </div>
+
+                <img id="mySpinner" src="/images/IC764876.png" ng-show="loading" />
+
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
